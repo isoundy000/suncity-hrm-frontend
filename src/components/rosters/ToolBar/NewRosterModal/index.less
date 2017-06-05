@@ -1,0 +1,23 @@
+@import '../../../../styles/base';
+
+:global(.newRosterModal) {
+    label[for="departmentsAll"] {
+        margin-left: 0 !important;
+
+        &:before {
+            content: "*";
+            display: inline-block;
+            margin-right: 4px;
+            color: @themeRed !important;
+            font-family: SimSun;
+            font-size: 12px;
+        }
+    }
+
+    :global(.ant-checkbox-group) {
+        :global(.ant-checkbox-wrapper) {
+            margin-left: 0px;
+            margin-right: 8px;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@import '../../../../styles/base';
+
+.listItem {
+    height: 90px;
+    margin: 20px auto;
+    padding: 0 39px;
+    border-radius: 6px;
+    background-color: darken(@background, 2%);
+
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+
+    .header {
+        margin-top: 10px;
+        height: 39px;
+        line-height: 39px;
+    }
+
+    .basicInfo {
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .goToDetail {
+        height: 90px;
+        line-height: 90px;
+        text-align: right;
+        font-size: 30px;
+        a {
+            display: inline-block;
+            width: 100%;
+            color: darken(@borderGrey, 5%);
+        }
+
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -o-transition: all .5s;
+        -ms-transition: all .5s;
+
+        &:hover {
+            a {
+                color: @themeGreen !important;
+            }
+        }
+
+    }
+
+    &:hover {
+        background-color: darken(@background, 3.5%);
+        .goToDetail {
+            a {
+                color: @grey;
+            }
+        }
+    }
+}

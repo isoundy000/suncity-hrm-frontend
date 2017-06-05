@@ -1,0 +1,18 @@
+@import "../../../../styles/base";
+
+.addUserModal {
+    :global(.ant-select-selection__choice) {
+        float: none;
+    }
+
+    :global(.ant-select-selection__rendered) {
+        overflow: inherit;
+    }
+
+    :global(.ant-select-focused) {
+        :global(.ant-select-selection__rendered) {
+            overflow: hidden;
+        }
+    }
+
+}

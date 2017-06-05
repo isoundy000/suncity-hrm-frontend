@@ -1,0 +1,20 @@
+@import "../../../styles/base";
+@import "../../../styles/antdOverride/button";
+
+.titleBar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.title {
+    text-align: center;
+    font-size: 18px;
+}
+
+.createBtn {
+    text-align: right;
+
+    :global(.ant-btn) {
+        .btn-primary(@themeOrange);
+    }
+}

@@ -1,0 +1,194 @@
+@import "~styles/base";
+
+.selectInput {
+  :global(.rw-widget.rw-state-focus) {
+    box-shadow: none;
+    border-color: @themeOrange;
+
+
+    &:hover {
+        box-shadow: none;
+        border-color: @themeOrange;
+    }
+  }
+
+  :global(.rw-dropdownlist.rw-state-focus:after) {
+      content: none;
+  }
+
+  :global(.rw-dropdownlist.rw-open) {
+      border-color: @themeOrange;
+      box-shadow: 0 0 3px @themeOrange;
+  }
+
+  :global(.rw-dropdownlist) {
+      border: @borderGrey 1px solid;
+      border-radius: 2px;
+      box-shadow: none;
+
+      &:hover {
+
+          background-color: white;
+          border-color: @themeOrange;
+      }
+
+      :global(.rw-open .rw-dropdownlist-picker .rw-i-caret-down:before) {
+          content: '\E800';
+          color: @themeOrange;
+      }
+
+      :global(.rw-popup.rw-widget) {
+          border: hidden;
+          box-shadow: 0 1px 15px @grey;
+          border-radius: 2px;
+          margin-top: 5px;
+      }
+
+      :global(.rw-filter-input) {
+          border-color: @borderGrey;
+          border-radius: 0;
+          margin: 5px;
+          width: auto;
+          height: 30px;
+
+          :global(.rw-input) {
+              display: list-item;
+              height: 28px;
+              padding: 0 10px;
+          }
+      }
+
+      :global(.rw-filter-input > span) {
+          margin-top: 0;
+
+          :global(.rw-i) {
+              color: @themeGreen;
+              font-size: 14px;
+          }
+      }
+
+      :global(.rw-list-option) {
+          // text-align: center;
+          padding-left: 10px;
+          margin-left: 10px;
+          position: relative;
+          border: none;
+          border-bottom: 2px solid transparent;
+          outline: none;
+
+          width: 139px;
+      }
+
+      :global(.rw-list-option:hover) {
+          background-color: white;
+          border: none;
+          // color: $fontBlack !important;
+          color: @themeGreen;
+
+          // &:after {
+          //     content: "";
+          //     position: absolute;
+          //     bottom: 0;
+          //     right: 5%;
+          //     height: 2px;
+          //     width: 90%;
+          //     background-color: @themeOrange;
+          //     visibility: visible;
+          // }
+      }
+
+      :global(.rw-list-option.rw-state-selected) {
+          background-color: white;
+          border: none;
+          color: @themeGreen;
+
+          // &:after {
+          //     content: "";
+          //     position: absolute;
+          //     bottom: 0;
+          //     right: 5%;
+          //     height: 2px;
+          //     width: 90%;
+          //     background-color: lighten(@themeOrange, 20%);
+          //     visibility: visible;
+          // }
+      }
+
+
+      :global(.dropdown-option-js) {
+          padding-left: 10px;
+          margin-left: 10px;
+          position: relative;
+          border: none;
+
+          border-bottom: 2px solid transparent;
+          outline: none;
+          width: 139px;
+
+          overflow: hidden;
+          white-space: nowrap;
+
+          &:hover {
+              background-color: white;
+              border: none;
+              border-bottom: 2px solid @themeOrange;
+              border-radius: 0;
+              // color: $fontBlack !important;
+              color: @themeGreen;
+
+              // &:after {
+              //     content: "";
+              //     position: absolute;
+              //     bottom: 0;
+              //     right: 5%;
+              //     height: 2px;
+              //     width: 90%;
+              //     background-color: @themeOrange;
+              //     visibility: visible;
+              // }
+          }
+      }
+
+
+
+      :global(.rw-state-selected) {
+          padding-left: 10px;
+          margin-left: 10px;
+
+          position: relative;
+          border: none;
+          border-bottom: 2px solid @themeOrange !important;
+          border-radius: 0;
+          outline: none;
+          width: 139px;
+
+          overflow: hidden;
+          white-space: nowrap;
+
+          text-overflow: ellipsis;
+
+          &:hover {
+              background-color: white;
+              border: none;
+              // color: $fontBlack !important;
+              color: @themeGreen;
+
+              // &:after {
+              //     content: "";
+              //     position: absolute;
+              //     bottom: 0;
+              //     right: 5%;
+              //     height: 2px;
+              //     width: 90%;
+              //     background-color: @themeOrange;
+              //     visibility: visible;
+              // }
+          }
+      }
+
+      :global(.hiding) {
+          text-overflow: ellipsis;
+      }
+
+  }
+}

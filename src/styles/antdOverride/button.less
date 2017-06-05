@@ -1,0 +1,37 @@
+@import "../base";
+
+.btn-default (@color: @themeGreen,
+              @hoverColor: darken(@color, 10%),
+              @min-width: 90px) {
+    background: white;
+    border-color: @color;
+    color: @color;
+    min-width: @min-width;
+
+    &:hover {
+        color: @hoverColor;
+        border-color: @hoverColor;
+    }
+}
+
+.btn-primary (@color: @themeGreen,
+              @hoverColor: @color,
+              @min-width: 90px) {
+    background: darken(@color, 10%);
+    border-color: darken(@color, 10%);
+    color: white;
+    min-width: @min-width;
+
+    &:hover {
+        background: @hoverColor;
+        border-color: @hoverColor;
+        color: white;
+    }
+}
+
+:global(.ant-btn) {
+    // min-width: 90px !important;
+
+    margin-left: 5px;
+    margin-right: 5px;
+}

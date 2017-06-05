@@ -1,0 +1,206 @@
+// $assets-path: "routes/RecruitMessages/components/assets";
+@import "../../../styles/base";
+
+@assets-path: "./assets";
+
+.tag {
+    vertical-align:top;
+    display: inline-block;
+    width: 30px;
+    // height: 101px;
+    color: #fff;
+    padding: 28px 8px;
+    margin-top: 10px;
+    line-height: 16px;
+    border-radius: 5px 0 0 5px;
+}
+
+.tagYellow {
+    background: @themeOrange;
+}
+
+.tagGreen {
+    background: @tagGreen;
+}
+
+.tagRed {
+    background: @tagRed;
+}
+
+.tagBlue {
+    background: @tagBlue;
+}
+
+.tagGrey {
+    background: @tagGrey;
+}
+
+.card {
+    vertical-align:top;
+    display: inline-block;
+    border: 1px #f1f1f1 solid;
+    width: 1168px;
+
+    .name {
+        color: #243043 !important;
+    }
+}
+
+.lightColor {
+    color: #b5b5b5;
+}
+
+.wholeCard {
+    margin-bottom: 20px;
+}
+
+.cardHeader {
+    border-bottom: 1px #f1f1f1 solid;
+    background-color: #fbfbfb;
+
+    .textInfo {
+        display: inline-block;
+        vertical-align:top;
+        width: 1068px;
+        height: 101px;
+        padding-top: 21px;
+        padding-left: 41px;
+
+        .name {
+            font-size: 18px;
+        }
+
+        .personalInfo {
+            font-size: 14px;
+            line-height: 40px;
+
+            .info {
+                padding-left: 20px;
+                padding-right: 10px;
+                margin-right: 20px;
+                border-right: 2px #e1e1e1 solid;
+
+                &:last-child {
+                    border-right: none;
+                    padding-right: 0;
+                    margin-right: 0;
+                }
+            }
+
+        }
+    }
+
+    .gravatar {
+        display: inline-block;
+        position: relative;
+        margin: 20px 39px 20px 0;
+        width: 59px;
+        height: 59px;
+        overflow: hidden;
+        border-radius: 100%;
+
+        img {
+            display: block;
+            width: 59px;
+            height: auto;
+            min-height: 59px;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+}
+
+.cardBody {
+    background-color: #ffffff;
+    padding-top: 11px;
+    padding-left: 41px;
+    padding-right: 39px;
+    line-height: 36px;
+
+    .title {
+        font-size: 14px;
+    }
+
+    .item {
+        height: 36px;
+        font-size: 12px;
+        line-height: 36px;
+    }
+
+    .result {
+        :global(.ant-rate-star) {
+            &:before {
+                font-size: 12px;
+            }
+        }
+        ul {
+            margin-top: -2.5px;
+            height: 36px;
+            font-size: 12px;
+        }
+
+        p {
+            margin-top: 9px;
+            line-height: 18px;
+        }
+    }
+
+    .icons {
+        display: inline-block;
+        margin-right: 9px;
+        vertical-align: middle;
+        margin-top: -2.5px;
+        img {
+            display: table-cell;
+            vertical-align: middle;
+            height: 18px;
+            width: 17px;
+        }
+    }
+
+    .againTag {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 61px;
+        width: 97px;
+        float: right;
+        color: #fff;
+        text-align: center;
+        padding-top: 8px;
+        margin-top: -11px;
+        // position: absolute;
+        // right: 43px;
+
+        &:after {
+            clear: both;
+        }
+    }
+
+    .needAgainTag {
+        background-image: ~"url(@{assets-path}/xuyaohouxumianshi.png)";
+    }
+
+    .doesntNeedAgainTag {
+        background-image: ~"url(@{assets-path}/buxuyaohouxumianshi.png)";
+    }
+}
+
+.cardFooter {
+    background-color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 39px;
+    text-align: right;
+
+    :global(.ant-btn) {
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

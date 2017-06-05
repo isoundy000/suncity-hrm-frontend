@@ -1,0 +1,23 @@
+@import "../../../styles/base";
+@assets-path: "./assets";
+
+@grey: #eff2f7;
+
+.verticalCenterModal {
+    :global(.ant-modal-content) {
+        width: 600px;
+    }
+}
+
+.addlocationbtn {
+    background-image: ~"url(@{assets-path}/xinzeng.png)";
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+
+    &:hover {
+        background-image: ~"url(@{assets-path}/xinzeng_hover.png)";
+    }
+}

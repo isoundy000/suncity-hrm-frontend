@@ -1,0 +1,45 @@
+@import "../../../styles/base";
+
+.linksGroup {
+    display: block;
+    width: 100%;
+    
+    min-height: 98px;
+    //margin-left: 36px;
+    //margin-right: 36px;
+    padding-top: 14px;
+    padding-left: 8px;
+
+    line-height: 33px;
+
+    .link {
+        display: inline-block;
+
+        height: 30px;
+
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff;
+        line-height: 30px;
+        padding: 0px 10px;
+        margin-left: 16px;
+        margin-bottom: 12px;
+        border: 1px #ffffff solid;
+        border-radius: 15px;
+        //border-bottom: 2px transparent solid;
+
+        box-sizing: border-box; 
+
+        &:hover {
+            //border-bottom: 2px @themeGreen solid;
+        }
+    }
+
+    .commingSoon {
+        text-align: center;
+        height: 36px;
+        line-height: 36px;
+        font-size: 16px;
+        color: lighten(@fontBlack, 25%);
+    }
+}

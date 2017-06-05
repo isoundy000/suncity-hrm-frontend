@@ -1,0 +1,51 @@
+@import "../base";
+
+.tabsPanel () {
+    border-radius: 5px;
+    :global(.ant-tabs:not(.ant-tabs-vertical) .ant-tabs-content-animated) {
+        width: 100%;
+    }
+
+    :global(.ant-tabs-nav-container) {
+        height: 41px !important;
+    }
+    :global(.ant-tabs-nav-wrap) {
+        height: 41px !important;
+    }
+
+    :global(.ant-tabs-nav) {
+        height: 41px !important;
+    }
+
+    // for tabs title
+    :global(.ant-tabs-bar) {
+        div[style] {
+            float: left !important;
+        }
+    }
+
+    :global(.ant-tabs-bar) {
+        height: 41px;
+        margin-bottom: 0;
+
+        background-color: @darkWhite;
+
+        :global(.ant-tabs-tab) {
+            line-height: 14px;
+            font-size: 14px;
+            padding-top: 16px;
+            width: 110px;
+            text-align: center;
+        }
+
+        :global(.ant-tabs-ink-bar) {
+            height: 3px;
+        }
+
+    }
+
+    :global(.ant-tabs-content) {
+        padding-top: 10px;
+        padding-bottom: 60px;
+    }
+}

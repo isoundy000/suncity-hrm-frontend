@@ -1,0 +1,23 @@
+// $assets-path: "routes/RecruitMessages/components/assets";
+@import "../../../styles/base";
+@import "../../../styles/otherComponents/table-list";
+
+.messageTable {
+    .tableList;
+
+    :global(.ant-table) {
+        :global(.read) {
+            td {
+                color: @tableListGrey;
+
+                a {
+                    color: @tableListGrey !important;
+                }
+            }
+
+            td:first-child {
+                border-left: 5px @tableListGrey solid !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import '../../../styles/base';
+
+.dataTable {
+    margin-top: 20px;
+
+    .toolBar {
+        margin-bottom: 10px;
+
+        .info {
+            display: inline-block;
+            margin-right: 20px;
+            height: 32px;
+            line-height: 32px;
+
+            span {
+                color: @themeOrange;
+            }
+        }
+
+        .btnGroup {
+            text-align: right;
+
+            :global(.ant-btn) {
+                margin: 0;
+                margin-left: 10px;
+            }
+        }
+    }
+}

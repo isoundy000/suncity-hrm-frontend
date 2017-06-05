@@ -1,0 +1,30 @@
+@import '../base';
+
+:global(.ant-tabs) {
+    :global(.ant-tabs-bar) {
+        border-bottom: 1px @backGrey solid;
+    }
+
+    :global(.ant-tabs-ink-bar) {
+        background-color: @themeOrange;
+    }
+
+    :global(.ant-tabs-nav) {
+
+    }
+
+    :global(.ant-tabs-tab) {
+
+        &:hover {
+            color: @themeOrange !important;
+        }
+    }
+
+    :global(.ant-tabs-tab-active) {
+        color: @themeOrange !important;
+        :global(.ant-tabs-tab-inner) {
+            font-size: 14px;
+        }
+    }
+
+}

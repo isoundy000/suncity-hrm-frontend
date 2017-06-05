@@ -1,0 +1,128 @@
+@import "../base";
+
+.tableHead {
+    :global(.ant-table-thead) {
+        tr {
+            height: 83px;
+        }
+
+        th {
+            background-color: lighten(@fontBlack, 59%);
+            font-size: 14px;
+            color: lighten(@fontBlack, 20%);
+            text-align: center;
+            letter-spacing: 1.5px;
+
+            border-top: 1px lighten(@fontBlack, 55%) solid;
+            border-bottom: 1px lighten(@fontBlack, 55%) solid;
+        }
+
+        th:first-child {
+            border-left: 1px lighten(@fontBlack, 55%) solid;
+        }
+
+        th:last-child {
+            border-right: 1px lighten(@fontBlack, 55%) solid;
+        }
+    }
+}
+
+:global(.ant-table) {
+    :global(.ant-table-content) {
+        :global(.ant-table-placeholder) {
+            height: 69px;
+            padding-top: 28.5px;
+            border-right: 1px lighten(@fontBlack, 55%) solid;
+            border-left: 1px lighten(@fontBlack, 55%) solid;
+            border-bottom: 1px lighten(@fontBlack, 55%) solid;
+            font-size: 12px;
+            line-height: 12px;
+            background-color: lighten(@fontBlack, 59%);
+        }
+
+        :global{
+            .ant-table-body
+            {
+                .tableHead;
+
+                :global(.ant-table-tbody) {
+                    :global(.ant-table-row) {
+                        height: 69px;
+                        color: lighten(@fontBlack, 20%);
+
+                        background-color: lighten(@fontBlack, 59%);
+                        &:hover {
+                            :global(.sms-button) {
+                                :global(.ant-btn) {
+                                    display: inline-block;
+                                }
+                            }
+                            background-color: lighten(@themeGreen, 39%);
+                            color: lighten(@fontBlack, 0%);
+                        }
+
+                        td {
+                            text-align: center;
+                            border-color: lighten(@fontBlack, 55%);
+
+                        }
+
+                        td:first-child {
+                            // font-size: 15px !important;
+                            border-left: 1px lighten(@fontBlack, 55%) solid;
+                        }
+
+                        td:last-child {
+                            border-right: 1px lighten(@fontBlack, 55%) solid;
+                            // font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+:global{
+    .ant-table-scroll-position-left,
+    .ant-table-scroll-position-right,
+    .ant-table-scroll-position-middle
+    {
+        :global{
+            .ant-table-scroll,
+            .ant-table-fixed,
+            .ant-table-fixed-left,
+            .ant-table-fixed-right
+            {
+                background-color: lighten(@fontBlack, 59%);
+            }
+        }
+
+        :global{
+            .ant-table-body,
+            .ant-table-body-outer,
+            .ant-table-body-inner
+            {
+                .tableHead;
+                :global(.ant-table-tbody) {
+                    :global(.ant-table-row) {
+                        td {
+                            text-align: center;
+                            border-color: lighten(@fontBlack, 55%);
+                        }
+
+                        td:first-child {
+                            border-left: 1px lighten(@fontBlack, 55%) solid;
+                        }
+
+                        td:last-child {
+                            border-right: 1px lighten(@fontBlack, 55%) solid;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

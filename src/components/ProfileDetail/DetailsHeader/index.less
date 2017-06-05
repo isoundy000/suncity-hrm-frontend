@@ -1,0 +1,130 @@
+.container {
+  margin-top: 40px;
+  padding-left: 60px;
+  padding-top: 60px;
+  padding-right: 60px;
+  margin-bottom: 40px;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(99, 99, 99, .2);
+
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+  :global {
+    .personal-avatar {
+      float: left;
+
+      &-container {
+        position: relative;
+        width: 180px;
+        height: 180px;
+        border-radius: 100%;
+        overflow: hidden;
+        transform: rotate(0deg);
+
+        .width-larger {
+          width: auto;
+          height: 180px;
+        }
+
+        .height-larger {
+          width: 180px;
+          height: auto;
+        }
+
+        .ant-upload.ant-upload-drag {
+          border-radius: 100%;
+          opacity: 0;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .personal-summary {
+      margin-left: 220px;
+
+      &-name {
+        color: #243043;
+        margin-bottom: 20px;
+
+        &-chinese {
+          font-size: 32px;
+          line-height: 120%;
+          margin-right: 20px;
+        }
+
+        &-english {
+          font-size: 20px;
+          margin-right: 10px;
+        }
+
+        &-nickname {
+          font-size: 20px;
+        }
+      }
+
+      &-fields {
+        .field {
+          font-size: 16px;
+          line-height: 30px;
+          margin-bottom: 20px;
+          padding-right: 10px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          @include clearfix;
+        }
+
+        .icon {
+          float: left;
+          display: block;
+          width: 30px;
+          height: 30px;
+          margin-right: 10px;
+          border-radius: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+
+          &-1 {
+            background-image: ~"url(./assets/bianhao.png)";
+          }
+          &-2 {
+            background-image: ~"url(./assets/bumen.png)";
+          }
+          &-3 {
+            background-image: ~"url(./assets/dianhua.png)";
+          }
+          &-4 {
+            background-image: ~"url(./assets/changguan.png)";
+          }
+          &-5 {
+            background-image: ~"url(./assets/ruzhishijian.png)";
+          }
+          &-6 {
+            background-image: ~"url(./assets/leibie.png)";
+          }
+        }
+
+        .label {
+          display: inline-block;
+          color: #243043;
+          width: 80px;
+        }
+
+        .value {
+          color: #7c7c7c;
+        }
+      }
+    }
+
+    .position-summary {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "./base";
+@import "./antdOverride/tabs";
+@import "./antdOverride/form";
+@import "./antdOverride/modal";
+@import "./antdOverride/pagination";
+@import "./antdOverride/button";
+@import "./antdOverride/table";
+
+body {
+    overflow: auto;
+}
+
+:global(.shouldNotShow) {
+    display: none !important;
+}
+
+:global {
+
+    .ant-table-row {
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+
+}

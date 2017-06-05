@@ -1,0 +1,28 @@
+:global {
+  .holiday-calc {
+    @border-color: #8bca5a;
+    padding: 15px 0 !important;
+
+    .holiday-calc-container {
+      padding: 13px 30px 13px 30px;
+      border: 1px solid @border-color;
+      border-radius: 4px;
+
+      .y-form-control {
+        @border-color-hover: #ced0d0;
+        @border-color-focus: #ebbe39;
+
+        width: 150px;
+        margin-right: 5px;
+        border-color: transparent;
+        &:hover {
+          border-color: @border-color-hover;
+        }
+
+        &:focus {
+          border-color: @border-color-focus;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import '../base';
+
+:global(.ant-modal) {
+    width: auto !important;
+    min-width: 580px !important;
+
+    :global(.ant-modal-header) {
+        font-size: 16px;
+        color: @deepBlueGray;
+        background-color: @modalHeader;
+        border-bottom-width: 0;
+        height: 50px;
+    }
+
+    :global(.ant-modal-body) {
+        padding: 20px 40px;
+
+        max-height: 480px;
+        max-width: 690px;
+        overflow-x: auto;
+    }
+
+    :global(.ant-modal-footer) {
+        height: 50px;
+        padding: 7.5px 15px;
+        :global(.ant-btn) {
+            padding: 6px 25px;
+        }
+    }
+
+    :global(.ant-modal.table-modal) {
+        :global(.ant-modal-body) {
+            max-height: 400px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            overflow-y: auto;
+
+            :global(.y-form-group) {
+                padding-left: 5px;
+                padding-right: 5px;
+                :global(.y-control-label) {
+                    color: @themeGreen;
+                }
+            }
+        }
+    }
+}
+
+:global(.ant-modal-wrap) {
+    text-align: center;
+    // white-space: nowrap;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        width: 0;
+    }
+
+    :global(.ant-modal) {
+        display: inline-block;
+        vertical-align: middle;
+        top: 0;
+        text-align: left;
+    }
+}

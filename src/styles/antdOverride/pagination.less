@@ -1,0 +1,56 @@
+@import '../base';
+
+:global(.ant-pagination) {
+    float: none;
+    display: inline-block;
+    margin-top: 45px;
+
+    li {
+        display: inline-block !important;
+    }
+
+    :global(.ant-pagination-item) {
+        border-radius: 0px;
+        background-color: @darkWhite;
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    :global(.ant-pagination-item-active) {
+        border-radius: 0px;
+        background-color: @themeGreen;
+
+        &:hover {
+            a {
+                color: white;
+            }
+        }
+    }
+
+    :global(.ant-pagination-prev) {
+        border-radius: 0px;
+        background-color: @darkWhite;
+    }
+
+    :global(.ant-pagination-next) {
+        border-radius: 0px;
+        background-color: @darkWhite;
+    }
+
+    :global(.ant-select-selection) {
+        border-radius: 0px !important;
+    }
+
+    input {
+        border-radius: 0px !important;
+    }
+}
+
+:global(.ant-pagination.mini) {
+
+    :global(.ant-pagination-item) {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

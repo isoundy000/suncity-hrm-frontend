@@ -1,0 +1,64 @@
+.wrapper {
+  width: 240px;
+  position: relative;
+
+  .yInput {
+    transition: none;
+    border-color: transparent;
+    padding-left: 8px;
+    &:hover, &:focus {
+      background: #fff ~"url(../assets/bianji.png)" 215px center no-repeat;
+    }
+
+    &:hover {
+      border-color: #d9d9d9;
+    }
+
+    &:focus {
+      border-color: #ebbe39;
+    }
+  }
+
+  :global(.ant-input) {
+    &:disabled {
+      background-color: #FFF;
+      color: #666;
+      border: none;
+    }
+  }
+
+  .btnGroup {
+    display: none;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 32px;
+    right: 9;
+    z-index: 999;
+
+    button {
+      width: 22px;
+      height: 22px;
+      border: 0;
+      cursor: pointer;
+
+      &.btnSubmit {
+        margin-right: 4px;
+        background-image: ~"url(../assets/zhengque.png)";
+      }
+
+      &.btnCancel {
+        background-image: ~"url(../assets/cuowu.png)";
+      }
+    }
+  }
+
+  .active {
+    display: block;
+  }
+
+  .inactive {
+    display: none;
+    visibility: hidden;
+  }
+}

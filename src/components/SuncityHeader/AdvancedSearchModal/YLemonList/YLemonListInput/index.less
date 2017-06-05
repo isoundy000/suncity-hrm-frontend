@@ -1,0 +1,49 @@
+@import "../../../../../styles/base";
+
+.inputContainer {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  background-color: white;
+  overflow: hidden;
+  box-sizing: content-box;
+  box-shadow: none;
+  // border: none;
+  border-bottom: solid 1px @backGrey;
+
+  .itemInput {
+    color: @themeOrange;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+
+    &.unmatched {
+      color: #fc5b05;
+    }
+
+    &:hover {
+    }
+
+    &:focus {
+      border: solid 1px @themeOrange;
+    }
+
+    &.empty {
+      background: ~"url(./assets/bianji.png)" no-repeat 30px center;
+
+      &:focus {
+        background: none;
+      }
+    }
+
+    &.nonempty {
+      background: none;
+    }
+  }
+}

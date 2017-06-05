@@ -1,0 +1,112 @@
+@import "../../../styles/base";
+@import "../../../styles/otherComponents/tabs-panel";
+
+.tabsPanel {
+    .tabsPanel();
+
+    border: 1px @backGrey solid;
+    box-shadow: 5px 5px 15px @backGrey, -5px -5px 15px @backGrey;
+
+    :global(.ant-tabs-nav-container) {
+        height: 80px !important;
+    }
+    :global(.ant-tabs-nav-wrap) {
+        height: 80px !important;
+    }
+
+    :global(.ant-tabs-nav) {
+        height: 80px !important;
+    }
+
+    :global(.ant-tabs:not(.ant-tabs-vertical) .ant-tabs-tabpane) {
+        padding-right: 34px;
+        padding-left: 34px;
+    }
+
+    :global(.ant-tabs-bar) {
+        height: 80px;
+        :global(.ant-tabs-tab) {
+            padding-top: 33px !important;
+        }
+
+        :global(.ant-tabs-ink-bar) {
+            height: 4px;
+        }
+    }
+
+    :global(.ant-tabs-content) {
+        padding-top: 30px;
+        // padding-left: 34px;
+        padding-bottom: 60px;
+    }
+
+
+    .locationsTable {
+        :global(.ant-table) {
+            :global(.ant-table-row) {
+                &:hover {
+                    td {
+                        border-top: 1px #fbc544 solid;
+                        border-bottom: 1px #fbc544 solid;
+                    }
+                    td:first-child {
+                        border-left: 1px #fbc544 solid !important;
+                    }
+                    td:last-child {
+                        border-right: 1px #fbc544 solid;
+                    }
+                }
+            }
+
+            :global(.ant-table-row-level-0) {
+                background-color: @lightBlue !important;
+
+                td {
+                    border-top: 1px @lightBlue solid;
+                    border-bottom: 1px @lightBlue solid;
+                }
+
+                td:last-child {
+                    border-right: 1px @lightBlue solid;
+                }
+
+                td:first-child {
+                    padding-left: 60px;
+                    border-left: 4px @lightBlue solid;
+                }
+
+                &:hover {
+                    background-color: @lightBlue;
+                    td:first-child {
+                        border-left: 4px darken(@lightBlue, 10%) solid !important;
+                    }
+                }
+            }
+
+            :global(.ant-table-row-level-1) {
+                background-color: @lightYellow !important;
+
+                td {
+                    border-top: 1px @lightYellow solid;
+                    border-bottom: 1px @lightYellow solid;
+                }
+
+                td:last-child {
+                    border-right: 1px @lightYellow solid;
+                }
+
+                td:first-child {
+                    padding-left: 96px;
+                    border-left: 4px @lightYellow solid !important;
+                }
+
+                &:hover {
+                    background-color: @lightYellow;
+                    td:first-child {
+                        border-left: 4px darken(@lightYellow, 10%) solid !important;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+.radioWrapper {
+  width: 240px;
+  padding-left: 8px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  position: relative;
+  top: -10px;
+
+  :global {
+    .ant-select {
+      color: inherit;
+      font-size: 14px;
+      border-width: 1px;
+
+      .ant-select-selection {
+        background-color: transparent;
+        border: 1px solid transparent;
+      }
+
+      .ant-select-arrow {
+        display: none;
+      }
+
+      &:hover {
+        .ant-select-selection {
+          border-color: #ebbe39;
+        }
+
+        .ant-select-arrow {
+          display: block;
+        }
+      }
+
+      &.ant-select-open, &.ant-select-focused {
+        .ant-select-selection {
+          border-color: #ebbe93;
+        }
+      }
+    }
+
+    .ant-radio-inner {
+      background-color: #FFF;
+    }
+
+    .ant-radio-disabled,span {
+      color: #666;
+    }
+  }
+
+  .btnGroup {
+    display: none;
+    width: 48px;
+    height: 48px;
+    position: absolute;;
+    top: 32px;
+    left: 0;
+    z-index: 999;
+
+    button {
+      width: 22px;
+      height: 22px;
+      border: 0;
+      cursor: pointer;
+
+      &.btnSubmit {
+        margin-right: 4px;
+        background-image: ~"url(../assets/zhengque.png)";
+      }
+
+      &.btnCancel {
+        background-image: ~"url(../assets/cuowu.png)";
+      }
+    }
+  }
+
+  .active {
+    display: block;
+  }
+
+  .inactive {
+    display: none;
+    visibility: hidden;
+  }
+}

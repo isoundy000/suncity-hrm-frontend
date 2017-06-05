@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <link rel="stylesheet" href="index.css"/>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+     var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0 || (function (p) {
+       return p.toString() === "[object SafariRemoteNotification]";
+     })(!window['safari'] || safari.pushNotification);
+
+     if (isSafari) {
+       //部分 safari 浏览器不能打开网站，引入 js 解决。
+
+       document.write("<script src=\"https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en\">"+"<\/script>")
+     }
+    </script>
+
+    <script>window.host = "https://suncity-backend.ylemon.tech"; </script>
+    <script src="common.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

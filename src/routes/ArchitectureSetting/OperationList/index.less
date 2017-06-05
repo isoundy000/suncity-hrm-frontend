@@ -1,0 +1,22 @@
+@import "../../../styles/base";
+
+.operationMenu {
+    display: none;
+    div {
+        display: inline-block;
+    }
+
+    div:last-child {
+        padding-left: 40px;
+    }
+}
+
+:global(.ant-table-row) {
+    &:hover {
+        td:last-child {
+            .operationMenu {
+                display: inline-block;
+            }
+        }
+    }
+}

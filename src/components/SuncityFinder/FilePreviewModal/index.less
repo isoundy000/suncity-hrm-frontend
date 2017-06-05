@@ -1,0 +1,182 @@
+.filePreviewModal {
+  display: block;
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: #3E3E3E;
+
+  .close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    display: block;
+    font-size: 1em;
+    color: #fff;
+    z-index: 99999;
+
+  }
+}
+
+.errorContainer {
+  height: 100vh;
+  overflow: auto;
+  position: relative;
+  .spin{
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    :global(.ant-spin-dot) {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .errorMessage {
+    width: 500px;
+    position: absolute;
+    display: block;
+    text-align: center;
+    color: #ccc;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.imageContainer {
+  height: 100vh;
+  overflow: auto;
+  position: relative;
+  .spin{
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    :global(.ant-spin-dot) {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  img {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+:global(.modal-opened) {
+  overflow: hidden !important;
+}
+
+.pdfViwer{
+  padding-top: 42px;
+  .topPanel {
+      
+      
+    :global {
+      .ant-select,
+      .ant-select-selection,
+        {
+           width: 90px;
+           height: 28px;
+           line-height: 32px;
+           border: none;
+           border-radius: 2px;
+            
+        }
+    }
+   
+      
+    .pdfPagination{
+      width: 100px;
+      height: 32px;
+      display: inline-block;
+      position: relative;
+      left: 5%;
+      .pageUp,.pageDown{
+        display: inline-block;
+        &:global(.disable .anticon){
+          color: #ccc;
+          cursor: not-allowed;
+        }
+      }
+
+      .pages {
+        display: inline-block;
+        margin-left: 5px;
+        color: #fff;
+      }
+
+      :global(.anticon) {
+        color: #fff;
+        display: inline-block;
+        line-height: 32px;
+        margin-left: 10px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+    }
+    position: fixed;
+    top: 0;
+    background-color: #474747;
+    height: 32px;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: inset 1px 0 0 hsla(0,0%,100%,.08),inset 0 1px 1px hsla(0,0%,0%,.15),inset 0 -1px 0 hsla(0,0%,100%,.05),0 1px 0 hsla(0,0%,0%,.15),0 1px 1px hsla(0,0%,0%,.1);
+    .actions {
+      position: absolute;
+      left: 42%;
+      display: inline-block;
+      width: 660px;
+      height: 32px;
+      :global(.anticon) {
+        position: relative;
+        right: 5%;
+        color: #fff;
+        display: inline-block;
+        line-height: 32px;
+        margin-left: 10px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      
+      
+    }
+  }
+  .pdfContainer {
+    canvas {
+      margin: 0 auto;
+      display: block;
+    }
+    height: 100vh;
+    overflow: auto;
+  }
+}
+
+ :global {
+     .ant-select-dropdown-menu-item,
+     .ant-select-dropdown-menu-item-active,
+     .ant-select-dropdown-menu-item-selected,
+        {
+            border-bottom:none !important;
+            color: #474747 !important;
+        }
+    }

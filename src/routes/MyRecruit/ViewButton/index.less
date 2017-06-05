@@ -1,0 +1,10 @@
+// $assets-path: "routes/MyRecruits/components/assets";
+@import "../../../styles/base";
+@import "../../../styles/antdOverride/button";
+
+.viewButton {
+    display: inline-block;
+    :global(.ant-btn) {
+        .btn-default(@buttonOrange);
+    }
+}

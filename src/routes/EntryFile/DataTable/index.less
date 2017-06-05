@@ -1,0 +1,140 @@
+@import "../../../styles/base";
+
+@light-blue: #eaf8fe;
+
+.headerImage {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: block;
+  overflow: hidden;
+  transform: rotate(0deg);
+  margin:0 auto;
+
+  :global(.width-larger) {
+    width: auto;
+    height: 26px;
+  }
+
+  :global(.height-larger) {
+    width: 26px;
+    height: auto;
+  }
+}
+
+.container {
+  text-align: center;
+  box-shadow: 0 1px 6px rgba(99, 99, 99, 0.2);
+
+  :global(.sms-button) {
+    :global(.ant-btn) {
+      display: none;
+    }
+  }
+
+  :global(.ant-table-tbody) {
+    :global(.ant-table-row) {
+      height: 56px;
+      font-size: 12px;
+      background-color: #FFFFFF;
+      &:hover {
+        :global(.sms-button) {
+          :global(.ant-btn) {
+            display: inline-block;
+          }
+        }
+        background-color: @backGrey;
+        color: lighten(@fontBlack, 0%);
+      }
+
+      td {
+        text-align: center;
+        border:none;
+        padding:0;
+      }
+
+      td:first-child {
+        // font-size: 15px !important;
+        // border-left: 5px lighten(@fontBlack, 55%) solid;
+      }
+
+      td:last-child {
+        // border-right: 1px white solid;
+        // font-size: 12px;
+      }
+    }
+  }
+
+  :global(.ant-table-thead) {
+    border-radius: 0px;
+    tr {
+      height: 50px;
+    }
+
+    th {
+      background-color: #f7f7f7;
+      font-size: 12px;
+      color: lighten(@fontBlack, 20%);
+      text-align: center;
+    }
+  }
+
+  :global(.ant-table-pagination) {
+    float: none;
+    display: inline-block;
+    margin-top: 45px;
+
+    // margin: 16px auto;
+    // min-width: 200px;
+    // width: 200px;
+
+    li {
+      display: inline-block !important;
+      background: #f9f9f9;
+    }
+
+    :global(.ant-pagination-item) {
+      margin-left: 18px;
+      margin-right: 18px;
+
+      &:hover {
+        a {
+          color: @themeGreen;
+        }
+      }
+    }
+
+    :global(.ant-pagination-item-active) {
+      border-radius: 0px;
+
+      &:hover {
+        background-color: darken(@themeGreen, 10%);
+
+        a {
+          color: white;
+        }
+      }
+    }
+
+    :global(.ant-pagination-prev) {
+      &:hover {
+        a {
+          color: @themeGreen;
+        }
+      }
+    }
+
+    :global(.ant-pagination-next) {
+      &:hover {
+        a {
+          color: @themeGreen;
+        }
+      }
+    }
+  }
+
+  .unCommit {
+      color: @themeRed;
+  }
+}

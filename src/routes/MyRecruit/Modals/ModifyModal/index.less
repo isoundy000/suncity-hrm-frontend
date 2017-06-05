@@ -1,0 +1,45 @@
+// $assets-path: "routes/MyRecruits/components/assets";
+@import "../../../../styles/base";
+@import "../../../../styles/antdOverride/button";
+
+.modifyModal {
+    :global(.ant-modal) {
+    }
+
+    :global(.ant-modal-body) {
+    }
+
+    :global(.ant-rate-star) {
+    }
+    ul {
+        font-size: 12px;
+      li{
+        height: 36px;
+      }
+    }
+}
+
+.modifyButton {
+    display: inline-block;
+    :global(.ant-btn) {
+        .btn-default(@buttonOrange);
+    }
+}
+
+.formTitle {
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    color: @themeOrange;
+    padding-left: 9px;
+    border-left: 3px @themeOrange solid;
+}
+
+
+.formBody {
+    :global(.ant-form-item-label) {
+        // text-align: left;
+        // padding-left: 12px;
+    }
+}

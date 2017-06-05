@@ -1,0 +1,24 @@
+@import "../../styles/base";
+
+.homeMain {
+  width: 1200px;
+  min-height: 600px;
+  margin: 0 auto;
+
+  :global(.ant-col-md-4) {
+    box-sizing: content-box;
+    // width: 220px;
+    width: 180px;
+
+
+    :global(.ant-card) {
+      box-sizing: border-box;
+    }
+  }
+
+  .panel{
+    position: relative;
+
+    margin-top: 15px; // 计算所得
+  }
+}

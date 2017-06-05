@@ -1,0 +1,98 @@
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  height: 260px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  position: relative;
+  box-shadow: 0 1px 6px rgba(99, 99, 99, .2);
+
+  .header {
+    position: absolute;
+    top: 80px;
+    left: 290px;
+  }
+
+  .nickName {
+      font-size: 20px;
+  }
+
+  .lableTip {
+      font-size: 14px;
+      font-weight: bold;
+      margin-right: 5px;
+  }
+
+  .detail {
+      position: absolute;
+      left: 290px;
+      bottom: 70px;
+      .detailItem {
+          line-height: 30px;
+          display: inline-block;
+          margin-right: 20px;
+      }
+  }
+  :global {
+      .personal-summary-name-chinese {
+          font-size: 32px;
+      }
+
+      .personal-summary-name-english {
+          font-size: 20px;
+          margin-left: 20px;
+          display: inline-block;
+      }
+
+      .personal-avatar {
+          position: absolute;
+          top: 40px;
+          left: 40px;
+          &-container {
+              position: relative;
+              width: 180px;
+              height: 180px;
+              border-radius: 100%;
+              overflow: hidden;
+
+              .width-larger {
+                  width: auto;
+                  height: 180px;
+              }
+
+              .height-larger {
+                  width: 180px;
+                  height: auto;
+              }
+
+              .ant-upload.ant-upload-drag {
+                  border-radius: 100%;
+                  opacity: 0;
+                  &:hover {
+                      opacity: 1;
+                  }
+              }
+          }
+      }
+
+      .icon {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          vertical-align: middle;
+          margin-right: 10px;
+          border-radius: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+
+          &-no {
+              background-image: ~"url(../assets/bianhao.png)";
+          }
+          &-mobile {
+              background-image: ~"url(../assets/dianhua.png)";
+          }
+      }
+  }
+}

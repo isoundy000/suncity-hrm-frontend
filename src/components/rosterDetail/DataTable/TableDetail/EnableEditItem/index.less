@@ -1,0 +1,31 @@
+@import '../../../../../styles/base';
+
+.enableEditItem {
+    .dot {
+        height: 8px;
+        width: 8px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 100%;
+    }
+
+    .changeNotice {
+        .dot;
+        background: @themeRed;
+    }
+
+    .placeholder {
+        .dot;
+        background: transparent;
+    }
+
+    :global{
+        .ant-select,
+        .ant-select-lg
+        {
+
+        }
+    }
+}

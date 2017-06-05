@@ -1,0 +1,109 @@
+@import "~styles/base";
+
+.templateSec {
+  display: inline-block;
+  line-height: 36px;
+  :global(.anticon) {
+    float: right;
+    margin-right: 5px;
+    margin-top: 8px;
+    color: @grey;
+  }
+  span {
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #666666;
+  }
+  .dropDownMenu {
+    background-color: #fff;
+    width: 166px !important;
+    border-radius: 2px;
+    height: 30px;
+    line-height: 30px;
+    border: #ccc 1px solid;
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 14px;
+    a {
+      font-size: 14px;
+      color: @fontBlack !important;
+    }
+
+  }
+}
+
+@boxShadow: 0 1px 6px hsla(0, 0%, 39%, .2);
+
+.templateMemu {
+  // margin-left: -15px;
+  // padding: 0 10px;
+
+  width: 166px;
+  box-shadow: @boxShadow !important;
+
+  .hrSec {
+    margin-top: 10px;
+    padding: 0 !important;
+    height: 1px;
+
+    :global(hr) {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid @backGrey;
+      margin: 1em 0;
+      padding: 0;
+    }
+  }
+
+  .templateMemuItem {
+    position: relative;
+
+    :global(a) {
+      font-size: 14px;
+      color: @fontBlack;
+    }
+
+    &.addNewItem {
+      :global(a) {
+        color: @grey;
+      }
+    }
+
+    &:global(.ant-dropdown-menu-item) {
+      // text-align: center;
+      width: 170px;
+      padding: 7px 10px;
+    }
+    &:hover {
+      .editImage {
+        display: block !important;
+      }
+      background-color: white;
+    }
+    height: 38px;
+  }
+
+  .templateMemuItem:hover:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    height: 2px;
+    width: 90%;
+    background-color: @orange;
+    visibility: visible;
+  }
+
+  .editImage {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+
+  .templateMemuSelected {
+
+  }
+}

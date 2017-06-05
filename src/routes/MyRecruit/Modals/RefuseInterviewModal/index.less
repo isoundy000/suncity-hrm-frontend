@@ -1,0 +1,18 @@
+// $assets-path: "routes/MyRecruits/components/assets";
+@import "../../../../styles/base";
+@import "../../../../styles/antdOverride/button";
+
+.refuseButton {
+    display: inline-block;
+    :global(.ant-btn) {
+        .btn-default(@buttonRed);
+    }
+}
+
+.verticalCenterModal {
+    :global(.ant-modal) {
+        :global(.ant-modal-content) {
+            max-height: 600px;
+        }
+    }
+}

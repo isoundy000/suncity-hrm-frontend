@@ -1,0 +1,65 @@
+@import "../../../styles/base";
+
+@black: #243043;
+
+:global(.ant-col-6) {
+    text-align: left;
+}
+
+:global(.ant-form-item-label){
+    :global(.ant-form-item-required) {
+        color: @black !important;
+        &:before {
+            color: @black !important;
+        }
+    }
+    label {
+        color: @black !important;
+    }
+}
+
+:global(.ant-input) {
+    &:hover {
+        border-color: @themeGreen;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 2px rgba(157, 224, 183, 0.2);
+        border-color: @themeGreen;
+    }
+}
+
+
+:global(.ant-radio-button-wrapper) {
+    &:hover {
+        color: @themeGreen;
+        span {
+            color: @themeGreen;
+        }
+    }
+}
+
+:global(.ant-radio-button-wrapper-checked) {
+    background-color: @themeGreen;
+    border-color: @themeGreen;
+    box-shadow: -1px 0 0 0 @themeGreen;
+    color: #fff;
+
+    span {
+        color: #fff;
+    }
+
+    &:hover {
+        background-color: @themeGreen;
+        box-shadow: -1px 0 0 0 @themeGreen;
+        border-color: @themeGreen;
+        color: #fff;
+        span {
+            color: #fff;
+        }
+    }
+
+    &:first-child {
+        border-color: @themeGreen;
+    }
+}

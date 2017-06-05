@@ -1,0 +1,812 @@
+@import "~styles/base";
+@import "~styles/antdOverride/button";
+
+:global(.body-noscroll) {
+    overflow: hidden !important;
+}
+
+.jobSpin{
+    :global(.ant-spin-dot){
+        position: fixed !important;
+    }
+}
+.jobApplicationContainer {
+
+    :global(.ant-col-md-24) {
+        margin-bottom: 10px;
+    }
+
+    :global(.ant-tabs-bar) {
+        // margin-right: 20px;
+        // margin-left: 20px;
+    }
+
+    :global(.ant-modal-wrap) {
+        overflow: hidden;
+    }
+}
+
+// :global(.ant-btn) {
+// .archSettingBtn {
+//     border-color: @green;
+//     color: @green;
+//     border-radius: 18px;
+
+//     &:hover {
+//         border-color: darken(@green, 10%);
+//         color: darken(@green, 10%);
+//     }
+// }
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+    background-color: #ffffff;
+    margin-left: 180px;
+    box-shadow: 5px 5px 15px @backGrey, -5px -5px 15px @backGrey;
+
+}
+
+.options {
+    background-color: #ffffff;
+    position: absolute;
+    width: 171px;
+    height: 200px;
+    box-shadow: 5px 5px 15px @backGrey, -5px -5px 15px @backGrey;
+    ul {
+        padding-left: 0;
+        margin-top: 40px;
+        .choice {
+            cursor: pointer;
+            border-left: 4px solid #ffffff;
+            padding-left: 46px;
+            font-size: 15px;
+            line-height: 45px;
+            padding: 10px auto;
+            background-repeat: no-repeat, no-repeat;
+            background-position: 22px 14px, 142px 18px;
+        }
+
+        .firstChoice {
+            .choice;
+            background-image: url('../JobApplication/assets/cup.png'), url('../JobApplication/assets/arrowhead-gray.png');
+            &:hover {
+                background-image: url('../JobApplication/assets/cup-green.png'), url('../JobApplication/assets/arrowhead-green.png');
+                border-left: 4px solid @themeGreen;
+            }
+        }
+        .firstChoiceActive {
+            .firstChoice;
+            color: @themeGreen;
+            border-left: 4px solid @themeGreen;
+            background-image: url('../JobApplication/assets/cup-green.png'), url('../JobApplication/assets/arrowhead-green.png');
+        }
+
+        .secondChoice {
+            .choice;
+            background-image: url('../JobApplication/assets/circel-star.png'), url('../JobApplication/assets/arrowhead-gray.png');
+            &:hover {
+                color: @themeGreen;
+                background-image: url('../JobApplication/assets/circel-star-green.png'), url('../JobApplication/assets/arrowhead-green.png');
+            }
+        }
+        .secondChoiceActive {
+            .secondChoice;
+            color: @themeGreen;
+            border-left: 4px solid @themeGreen;
+            background-image: url('../JobApplication/assets/circel-star-green.png'), url('../JobApplication/assets/arrowhead-green.png');
+        }
+        .thirdChoice {
+            .choice;
+            background-image: url('../JobApplication/assets/heart.png'), url('../JobApplication/assets/arrowhead-gray.png');
+            &:hover {
+                color: @themeGreen;
+                background-image: url('../JobApplication/assets/heart-green.png'), url('../JobApplication/assets/arrowhead-green.png');
+            }
+        }
+        .thirdChoiceActive {
+            .thirdChoice;
+            color: @themeGreen;
+            border-left: 4px solid @themeGreen;
+            background-image: url('../JobApplication/assets/heart-green.png'), url('../JobApplication/assets/arrowhead-green.png');
+        }
+    }
+}
+
+.jiangbeiImg {
+    margin-right: 10px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    line-height: 16px;
+}
+
+.currentOption {
+    background-color: #ffffff;
+    margin-left: 180px;
+    height: 200px;
+    box-shadow: 5px 5px 15px @backGrey, -5px -5px 15px @backGrey;
+    padding-top: 40px;
+    padding-left: 60px;
+    padding-right: 40px;
+    padding-bottom: 22px;
+    .leftList {
+        color: #666666;
+        font-size: 18px;
+
+        ul {
+            padding: 0;
+            .apply {
+                padding-left: 28px;
+                line-height: 44px;
+                span {
+                    margin-left: 22px;
+                }
+            }
+            .applyDepartment {
+                .apply;
+                background: url("../JobApplication/assets/floor.png") no-repeat 0px 16px;
+            }
+            .applyJob {
+                .apply;
+                background: url("../JobApplication/assets/badge-gray.png") no-repeat 0px 16px;
+            }
+            .applyTime {
+                .apply;
+                background: url("../JobApplication/assets/wait.png") no-repeat 0px 16px;
+            }
+
+        }
+    }
+    .rightTop {
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        color: @deepFontBlack;
+        font-size: 25px;
+    }
+
+    .Rate {
+        position: absolute;
+        right: 40px;
+        top: 84px;
+    }
+    .rightBottom {
+        position: absolute;
+        right: 40px;
+        bottom: 22px;
+        .btn {
+            display: inline-block;
+            // margin-left: 8px;
+
+            .btn-default(white, white);
+
+            span {
+                margin-left: 16px;
+            }
+        }
+
+        .btnSchedule {
+            .btn;
+            background: url("../JobApplication/assets/check.png") no-repeat 14px 8px @themeOrange;
+        }
+        .btnInterview {
+            .btn;
+            background: url("../JobApplication/assets/exclamation.png") no-repeat 16px 8px @buttonRed;
+        }
+        .btnSign {
+            .btn;
+            background: url("../JobApplication/assets/document2.png") no-repeat 14px 8px @buttonDeepOrange;
+        }
+        .btnSms {
+            .btn;
+            background: url("../JobApplication/assets/sms.png") no-repeat 14px 10px @buttonDeepGreen;
+        }
+        .btnEmail {
+            .btn;
+            background: url("../JobApplication/assets/email.png") no-repeat 14px 10px @buttonLightGreen;
+        }
+        .btnContract {
+            .btn;
+            background: url("../JobApplication/assets/document.png") no-repeat 15px 10px @buttonBlue;
+        }
+    }
+}
+
+.history {
+    background-color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    ul {
+        //margin-bottom: 150px;
+        padding-left: 0;
+        .dotBlue {
+            background: url("../JobApplication/assets/dot-blue.png") no-repeat left 8px;
+        }
+        .dotYellow {
+            background: url("../JobApplication/assets/dot-yellow.png") no-repeat left 8px;
+        }
+        .dotGreen {
+            background: url("../JobApplication/assets/dot-green.png") no-repeat left 8px;
+        }
+        .dotGray {
+            background: url("../JobApplication/assets/dot-gray.png") no-repeat left 8px;
+        }
+        li {
+            margin-left: 60px;
+            margin-bottom: 30px;
+
+            .log {
+                color: #666666;
+                font-size: 16px;
+                line-height: 20px;
+                vertical-align: middle;
+                margin-left: 22px;
+            }
+            .logTime {
+                font-size: 14px;
+                color: #8A8A8A;
+                position: absolute;
+                right: 40px;
+            }
+        }
+
+        :global(.ant-rate){
+            display:inline-block;
+        }
+        :global(.ant-rate-star){
+            margin:0px;
+            display:inline-block;
+        }
+
+        .remark {
+            margin: -20px 0 38px 84px;
+            border-left: 6px solid @backGrey;
+            padding-left: 12px;
+            width: 750px;
+            .score{
+                display:inline-block;
+            }
+            .interviewRate {
+                display: inline-block;
+                :global(.ant-rate) {
+                    padding: 0;
+                    line-height: 20px;
+                    padding-bottom: 6px;
+                }
+                ul {
+                    margin: 0px;
+                    li {
+                        margin: 0;
+                        margin-right: 4px;
+                        font-size: 14px;
+                    }
+                }
+            }
+            span {
+                color: @deepFontBlack;
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+.interviewOrSign {
+    padding-top: 20px;
+    padding-bottom: 100px;
+    background-color: #ffffff;
+    .card {
+        position: relative;
+        width: 930px;
+        margin: 0 60px 22px 30px;
+        background-color: #ffffff;
+        .interviewStatus {
+            width: 30px;
+            height: 102px;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            font-size: 13px;
+            line-height: 16px;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .interviewStatusFinish {
+            .interviewStatus;
+            background-color: @tagBlue;
+        }
+        .interviewStatusAgree {
+            .interviewStatus;
+            background-color: @tagGreen;
+        }
+        .interviewStatusCancel {
+            .interviewStatus;
+            background-color: @tagGrey;
+
+        }
+        .interviewStatusWaitSign {
+            .interviewStatus;
+            background-color: @tagPink;
+        }
+        .interviewStatusRefuse {
+            .interviewStatus;
+            background-color: @tagRed;
+
+        }
+        .interviewStatusHaveNot {
+            .interviewStatus;
+            background-color: @tagOrange;
+        }
+
+        .cardContent {
+            border: 1px solid #f1f1f1;
+            width: 900px;
+            margin: 30px;
+            margin-top: 0;
+            background-color: #fbfbfb;
+            .badge {
+                width: 96px;
+                height: 60px;
+                position: absolute;
+                right: 44px;
+                top: 0px;
+                background: url("../JobApplication/assets/lack-triangle-yellow.png") no-repeat;
+                span {
+                    color: #FFFFFF;
+                    font: 600 12px 'Microsoft YaHei';
+                    position: absolute;
+                    top: 18px;
+                    left: 14px;
+                }
+            }
+            .badgeYes {
+                .badge;
+            }
+            .badgeNo {
+                .badge;
+                background: url("../JobApplication/assets/lack-triangle-gray.png") no-repeat;
+                span {
+                    left: 5px;
+                }
+            }
+            .title {
+                position: absolute;
+                top: 20px;
+                left: 74px;
+                color: @deepFontBlack;
+                font-size: 16px;
+            }
+            .buttonList {
+                position: absolute;
+                right: 20px;
+                bottom: 30px;
+
+                .ant-btn-clicked {
+                    transition: none;
+                }
+                .button {
+                    border: 1px #FBC544 solid;
+                    border-radius: 15px;
+                    display: inline-block;
+                    width: 88px;
+                    height: 30px;
+                    vertical-align: middle;
+                    line-height: 20px;
+                    margin-left: 10px;
+                    font-size: 14px;
+                    color: #FBC544;
+                    transition: none;
+                    background-color: #fbfbfb;
+                }
+                .cancel {
+                    // .button;
+                    // border: 1px #cdcdcd solid;
+                    // color: #cdcdcd;
+                    // &:hover {
+                    //     border: 1px #cdcdcd solid;
+                    //     color: #cdcdcd;
+                    // }
+                    // span {
+                    //     &:hover {
+                    //         border: none;
+                    //     }
+                    // }
+
+                    .btn-default(@disabledColor);
+                }
+                .alter {
+                    .btn-default(@themeOrange);
+                    // .button;
+                    // border: 1px #FBC544 solid;
+                }
+                .finsh {
+                    .btn-default(@themeOrange);
+                    // .button;
+                    // border: 1px #FBC544 solid;
+                }
+            }
+            ul {
+                margin: 50px 0 0 40px;
+                padding-bottom: 80px;
+                width: 800px;
+                .interviewLi {
+                    padding-left: 28px;
+                    display: block;
+                    line-height: 30px;
+                    font-size: 12px;
+                    vertical-align: middle;
+                }
+                .interviewTime {
+                    .interviewLi;
+                    background: url("../JobApplication/assets/wait.png") no-repeat left 8px;
+                }
+                .interviewPeople {
+                    .interviewLi;
+                    background: url("../JobApplication/assets/people.png") no-repeat left 8px;
+                }
+                .interviewRemark {
+                    .interviewLi;
+                    background: url("../JobApplication/assets/document3.png") no-repeat left 8px;
+                }
+                .interviewResult {
+                    .interviewLi;
+                    background: url("../JobApplication/assets/circel-check.png") no-repeat left 8px;
+                }
+                .interviewRate {
+                    .interviewLi;
+                    background: url("../JobApplication/assets/like.png") no-repeat left 8px;
+                    :global(.ant-rate) {
+                        display: inline-block;
+                        width: inherit;
+                        padding: 0;
+                        line-height: 20px;
+                        padding-bottom: 6px;
+                    }
+                    ul {
+                        margin: 0px;
+                        li {
+                            margin: 0;
+                            margin-right: 4px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .interviewEvaluation {
+                    .interviewLi;
+                    background: url("../JobApplication/assets/talk.png") no-repeat left 8px;
+                }
+                .interviewPeoples {
+                    .interviewLi;
+                    background: url("../JobApplication/assets/peoples.png") no-repeat left 8px;
+                }
+                .interviewRefuse {
+                    .interviewLi;
+                    background: url("../JobApplication/assets/cancel.png") no-repeat left 8px;
+                }
+                .interviewCancel {
+                    .interviewLi;
+                    background: url("../JobApplication/assets/cancel.png") no-repeat left 8px;
+                }
+            }
+
+        }
+    }
+
+}
+
+.contract {
+    padding-top: 20px;
+    background-color: white;
+}
+
+.modalBtnClass {
+    border-radius: 12px;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    color: @themeGrey;
+    padding: 0px 16px;
+    border: 1px solid @themeGrey;
+    vertical-align: middle;
+    .ant-btn-clicked {
+        transition: false;
+    }
+    &:hover {
+        span {
+            color: @themeGreen;
+        }
+        border-color: @themeGreen;
+    }
+}
+
+.modalClass {
+    max-width: 580px !important;
+    // position: relative !important;
+    // max-height:580px;
+
+    :global(.ant-modal-body) {
+        // max-height: 470px;
+        // overflow: auto;
+    }
+    :global(.ant-form-item-label) {
+        // text-align: left;
+        // color: #a0a0a0;
+        // font-size: 12px;
+        // label {
+        //     color: #a0a0a0 !important;
+        //     font-size: 12px;
+        // }
+    }
+    form {
+        // padding-left: 16px;
+        // padding-right: 16px;
+        .modalBtn {
+            .modalBtnClass;
+            margin-right: 10px;
+        }
+        :global(.ant-form-explain){
+            margin-bottom: 13px;
+        }
+
+        :global(.ant-radio-button-wrapper-checked) {
+            background: @themeGreen !important;
+            color: white;
+            border: none !important;
+            box-shadow: none !important;
+            span {
+                color: white;
+            }
+
+            &:hover {
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .fullWidthButton {
+        .allContract{
+            width: 430px;
+            height: 30px;
+            font-weight: bold;
+            margin-left: 46px;
+        }
+        .modalBtn {
+            .modalBtnClass;
+            margin-bottom: 20px;
+            width: 100% !important;
+        }
+        :global(.ant-radio-button) {
+            &:hover {
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    :global(.required) {
+        :global(label::before) {
+            display: inline-block;
+            margin-right: 4px;
+            content: "*";
+            font-family: SimSun;
+            font-size: 12px;
+            color: #f50;
+        }
+    }
+    :global(.ant-modal-footer) {
+        //padding-top: 0;
+        padding-bottom: 14px;
+        //border-top: none;
+        padding-right: 44px;
+    }
+
+    :global(.ant-form-item-required:before) {
+        //margin-left: -8px;
+        // margin-right: 4px;
+        // color: #f50 !important;
+    }
+
+    :global(.ant-modal-body) {
+        padding-bottom: 0;
+    }
+
+    :global(.ant-form-explain) {
+        color: #f50;
+    }
+
+    .placeHolder {
+        height: 36px;
+    }
+}
+
+.inputIconRight {
+    margin-left: 12px;
+}
+
+.modalContentTitle {
+    color: #fdd482;
+    border-left: solid 2px #fdd482;
+    padding-left: 14px;
+    margin-left: -14px;
+    margin-bottom: 24px;
+}
+
+.fullWidthButton {
+    :global(.ant-btn) {
+        // text-align: left;
+        // vertical-align: middle;
+        // //border-radius: 15px;
+        // background: #FCC443;
+        // width: 420px;
+        // height: 30px;
+        // border: none;
+        // margin-bottom: 20px;
+        // margin-left: 30px;
+        // &:hover {
+
+        // }
+    }
+    :global(.ant-checkbox-group-item){
+        .modalBtnClass;
+        text-align: left;
+        vertical-align: middle;
+        //border-radius: 15px;
+        background: #FFFFFF;
+        width: 420px;
+        height: 30px;
+        //border: #D9DDDD solid 1px;
+        border:none;
+        margin-bottom: 20px;
+        margin-left: 30px;
+        &:hover {
+        }
+    }
+}
+
+.contractTitle {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.modalErrorMessage {
+    border: 1px #FFE1D2 solid;
+    margin: 0 0 20px -18px;
+    padding-left: 38px;
+    background: #FDEBE5;
+    width: 498px;
+    height: 34px;
+    line-height: 34px;
+    background: no-repeat url("../JobApplication/assets/modal/error.png");
+    background-color: #fdebe5;
+    background-position: 6px 8px;
+}
+
+.contractCards {
+    padding: 0 60px;
+    margin: 39px 0;
+
+    :global(.ant-card-bordered) {
+        border: 1px solid #f1f1f1;
+        border-color: #f1f1f1;
+    }
+
+    .card {
+        margin-bottom: 20px;
+
+        :global(.ant-card-head) {
+            background-color: #f6f7f9;
+            height: 45px;
+            line-height: 45px;
+            font-size: 15px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .cardTitle {
+            height: 45px;
+            line-height: 45px;
+            img {
+                display: inline-block;
+                height: 16px;
+                width: 15px;
+                vertical-align: middle;
+                margin-top: -3.5px;
+            }
+
+            span {
+                display: inline-block;
+                font-size: 15px;
+                margin-left: 5px;
+                color: @fontBlack;
+            }
+        }
+
+        :global(.ant-card-body) {
+            padding: 5px 20px 20px 40px;
+
+            img {
+                height: 17px;
+                width: 18px;
+                vertical-align: middle;
+            }
+
+            span {
+                display: inline-block;
+                margin-left: 9px;
+                font-size: 12px;
+                color: @deepFontBlack;
+                height: 17px;
+                line-height: 17px;
+            }
+
+            .creator {
+                padding-top: 22px;
+            }
+
+            .time {
+                padding-top: 22px;
+            }
+
+            .buttonGroup {
+                text-align: right;
+
+                button {
+                    margin-left: 8px;
+                    margin-right: 8px;
+                    height: 32px;
+                    width: 90px;
+                    font-size: 14px;
+                    background-color: white;
+                    border: none;
+                    background-repeat: no-repeat;
+
+                    span {
+                        display: inline-block;
+                        height: 24px;
+                        line-height: 24px;
+                    }
+                }
+
+                .deleteBtn {
+                    background-image: url('../JobApplication/assets/shanchuanniu.png');
+                    span {
+                        color: #cdcdcd;
+                    }
+                }
+
+                .exportBtn {
+                    background-image: url('../JobApplication/assets/huichianniu.png');
+                    span {
+                        color: #fbc544;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.verticalCenterModal {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+
+    // :global(.ant-modal) {
+    //     top: 0;
+    // }
+}
+
+.fontLight {
+    color: #aaaaaa;
+}

@@ -1,0 +1,19 @@
+@import "../../../styles/base";
+@import "../../../styles/otherComponents/table-list";
+
+.tableContent {
+    .tableList;
+
+    min-height: 69vh;
+    text-align: center;
+
+    :global(.actionColumn) {
+        // padding-right: 60px;
+        text-align: right !important;
+        a {
+            display: inline-block;
+            padding: 0 5px;
+            color: @themeGreen !important;
+        }
+    }
+}

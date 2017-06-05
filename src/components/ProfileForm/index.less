@@ -1,0 +1,102 @@
+.content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 700px;
+  .element {
+    box-shadow: 0 1px 6px rgba(99, 99, 99, .2);
+  }
+  .main {
+    font-size: 14px;
+    padding-left: 20px;
+    margin-left: 160px;
+  }
+
+  :global {
+    .y-form-control,
+    .ant-input,
+    .ant-select,
+    .ant-select-selection {
+      width: 240px;
+    }
+
+    .btn-create-container {
+      overflow: hidden;
+      margin-bottom: 20px;
+
+      .btn-create-file {
+        @color: #8bca5a;
+
+        float: right;
+        padding: 8px 30px;
+        background-color: @color;
+        border-color: @color;
+        border-radius: 25px;
+        color: white;
+      }
+    }
+
+    .panel {
+      background: #fff;
+      border: 1px #eaeaea solid;
+      &-heading {
+        padding: 10px 20px;
+        background-color: #fff;
+        border-bottom: 1px solid #eee;
+        .panel-title {
+          color: #243043;
+          font-size: 16px;
+          small {
+            font-size: 16px;
+            margin-left: 5px;
+          }
+        }
+      }
+
+      &-body {
+        padding: 20px;
+      }
+
+      &.panel-collapse {
+        .panel-heading {
+          margin-bottom: 2px;
+        }
+      }
+    }
+
+    .ant-table {
+      margin-bottom: 20px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      table {
+        border-collapse:collapse;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        th {
+          background: #fff;
+        }
+
+        th, td {
+          text-align: center;
+          border: 1px #f1f1f1 solid;
+        }
+      }
+    }
+
+    .btn-add {
+      @btn-add-color: #8bca5a;
+      color: @btn-add-color;
+      border-radius: 25px;
+      background-color: transparent;
+      border-color: @btn-add-color;
+    }
+
+    .ant-row {
+      // overflow: hidden; // HACK
+      [class^=ant-col] {
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+// $assets-path: "routes/RecruitMessages/components/assets";
+@import "../../styles/base";
+
+.prevBtn {
+    border-color: @themeGreen;
+    color: @themeGreen;
+    border-radius: 18px;
+
+    &:hover {
+        border-color: darken(@themeGreen, 10%);
+        color: darken(@themeGreen, 10%);
+    }
+}
+
+.container {
+    width: 1200px;
+    margin: 30px auto;
+
+    :global(.ant-col-md-24) {
+        margin-bottom: 10px;
+    }
+}

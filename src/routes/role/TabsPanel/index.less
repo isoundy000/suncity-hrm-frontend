@@ -1,0 +1,22 @@
+@import "../../../styles/base";
+@import "../../../styles/otherComponents/tabs-panel";
+@import "../../../styles/antdOverride/button";
+
+.tabsPanel {
+    .tabsPanel();
+
+    .addBtn {
+        text-align: right;
+        margin-top: 10px;
+        margin-bottom: 20px;
+
+        :global(.ant-btn) {
+            .btn-primary(@themeOrange);
+        }
+    }
+
+    .regionFilter {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}

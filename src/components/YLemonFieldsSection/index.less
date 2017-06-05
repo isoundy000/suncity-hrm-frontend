@@ -1,0 +1,31 @@
+@avatarWidth: 100px;
+.personal-avatar {
+  width: @avatarWidth;
+  height: @avatarWidth;
+  position: absolute;
+
+  :global(.personal-avatar-container) {
+    position: relative;
+    width: @avatarWidth;
+    height: @avatarWidth;
+
+    img {
+      width: @avatarWidth;
+      height: @avatarWidth;
+      position: absolute;
+      border-radius: 2px;
+    }
+
+    .ant-upload-drag-container {
+      height: 100%;
+    }
+
+    .ant-upload.ant-upload-drag {
+      border-radius: 2px;
+      opacity: 0;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

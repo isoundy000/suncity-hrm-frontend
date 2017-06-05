@@ -1,0 +1,162 @@
+@import "~styles/base";
+@fontModalGrey: #6e7d97;
+.modalMain{
+  width: 640px !important;
+  :global(.ant-modal-header){
+    border-bottom: none !important;
+    background-color: @backGrey;
+    color: @fontModalGrey;
+    font-size: 16px;
+    height: 56px;
+    line-height: 56px;
+  }
+  :global(.ant-modal-body){
+    padding: 20px;
+  }
+  :global(.ant-form-item-control){
+      width: 500px;
+      margin: auto;
+  }
+  :global(.ant-input-wrapper){
+      input{
+          font-size: 16px;
+          height: 50px;
+          padding-left: 20px;
+          border-radius: 0;
+          border-color: #e5e8e7;
+      }
+  }
+  // :global(.ant-modal-footer){
+  //   // border-top: none !important;
+  //   // padding: 20px 40px 20px 0!important;
+  //   // text-align: center;
+  //   button{
+  //     padding: 0;
+  //     width: 100px;
+  //     color: white;
+  //     font-size: 14px;
+  //     border-radius: 19px;
+  //     height: 38px;
+  //     line-height: 38px;
+
+  //     margin-left: 10px;
+  //     span{
+  //       line-height: 29px;
+  //     }
+  //   }
+  //   :global(.ant-btn-primary){
+  //     background-color: @green;
+  //     border-color: @green;
+  //   }
+  //   :global(.ant-btn-default){
+  //     background-color: white;
+  //     color: @fontModalGrey;
+  //     border-color: @borderGrey;
+  //   }
+  // }
+  .modalTitle{
+      margin-bottom: 20px;
+      color: @green;
+      font-size: 14px;
+      margin-left: 20px;
+  }
+
+}
+
+.modalMain{
+    width: 640px !important;
+
+    .nameSec{
+        display: inline-block;
+        label{
+            font-size: 14px;
+            color: @green !important;
+            &:before{
+                color: #f50 !important;
+            }
+        }
+        :global(.ant-input-wrapper, .ant-form-explain){
+            margin-left: 20px;
+        }
+        :global(.ant-form-explain) {
+            margin-top: 5px;
+        }
+    }
+    .actionSec{
+        display: inline-block;
+        float: right;
+        height: 38px;
+    }
+    .setDefault,.defaultSec{
+        cursor: pointer;
+        display: inline-block;
+        cursor: pointer;
+        width: 120px;
+        height: 38px;
+        position: relative;
+        margin-left: 10px;
+        span{
+            position: absolute;
+            left: 35px;
+            top: 7px;
+            font-size: 16px;
+            color: @green;
+        }
+    }
+    .defaultSec{
+        span{
+            position: absolute;
+            left: 35px;
+            top: 7px;
+            font-size: 16px;
+            color: #cfd1d1;
+        }
+    }
+    .deleteSec{
+        display: inline-block;
+        cursor: pointer;
+        width: 100px;
+        height: 38px;
+        position: relative;
+        span{
+            position: absolute;
+            left: 35px;
+            top: 7px;
+            font-size: 16px;
+            color: white;
+        }
+    }
+
+    :global(.ant-modal-header){
+        border-bottom: none !important;
+        background-color: @backGrey;
+        color: @fontModalGrey;
+        font-size: 16px;
+        height: 56px;
+        line-height: 56px;
+    }
+
+    :global(.ant-form-item-control){
+        width: 500px;
+        margin: auto;
+    }
+
+    :global(.ant-input-wrapper){
+        input{
+            font-size: 16px;
+            height: 36px;
+            padding-left: 20px;
+            border-radius: 8px;
+            border-color: #e5e8e7;
+            width: 200px;
+        }
+    }
+
+    .modalTitle{
+        margin-top: 24px;
+        margin-bottom: 20px;
+        color: @green;
+        font-size: 14px;
+    }
+
+}

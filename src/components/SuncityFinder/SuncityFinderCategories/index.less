@@ -1,0 +1,15 @@
+.categories{
+  display: flex;
+  flex-wrap: wrap;
+
+  .category{
+    height: 40px;
+    cursor: pointer;
+    margin-right: 10px;
+
+    &:global(.active){
+      color: #fcc443;
+      border-bottom: #fcc443 4px solid;
+    }
+  }
+}

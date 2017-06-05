@@ -1,0 +1,126 @@
+@import "~styles/base";
+
+@green: #8bca5a;
+@fontGrey: #99a3b4;
+@fontBlack: #666666;
+:global(.ant-select-dropdown) {
+    // text-align: center;
+}
+
+:global(.ant-select-dropdown-menu-item-selected) {
+    // background-color: white;
+}
+
+:global(.ant-select-dropdown-menu-item-selected:after) {
+    // content: "";
+    // position: absolute;
+    // bottom: 0;
+    // right: 10%;
+    // height: 1px;
+    // width: 80%;
+    // background-color: @orange;
+    // visibility: visible;
+}
+
+:global(.ant-select-selection) {
+    // box-shadow: none;
+}
+
+:global(.ant-select-focused .ant-select-selection) {
+    // box-shadow: none;
+    // border-color: @orange !important;
+}
+
+:global(.ant-select-selection:hover) {
+    // border-color: @orange !important;
+    // box-shadow: none;
+}
+
+:global(.ant-select-selection:focus) {
+    // border-color: @orange !important;
+    // box-shadow: none;
+}
+
+.personalFileListFilter {
+    background-color: #fff;
+    .ant-advanced-search-form {
+        padding: 5px 5px;
+    }
+
+    :global(.ant-form-item-label) {
+        :global(label) {
+            font-size: 14px;
+            color: #243043;
+            font-weight: normal;
+
+            &:after {
+                content: none;
+            }
+        }
+    }
+
+    .filterSelect {
+        width: 45% !important;
+        margin-left: 5%;
+    }
+
+    .filterSelectFull {
+        width: 90%;
+        margin-left: 10%;
+    }
+
+    :global(.rw-widget.rw-dropdownlist) {
+        height: 36px;
+
+        :global(div.rw-input) {
+            height: 36px;
+            line-height: 36px;
+            font-size: 14px;
+            font-weight: normal;
+            color: #7c7c7c;
+        }
+    }
+
+    h3 {
+        line-height: 36px;
+        padding: 0 0 10px 10px;
+        font-size: 14px;
+        color: @fontGrey;
+        .headerIcon {
+            width: auto;
+            height: 16px;
+            vertical-align: text-bottom;
+            margin-right: 10px;
+        }
+    }
+
+    /* 由于输入标签长度不确定，所以需要微调使之看上去居中 */
+    .ant-advanced-search-form > .ant-row {
+        position: relative;
+        left: -6px;
+    }
+    .filterBtn {
+        margin-top: -24px;
+        text-align: center;
+        float: right;
+        width: 140px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        span {
+            font-size: 14px;
+        }
+        i {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+    .ant-btn {
+        height: 36px;
+        width: 100%;
+        border-radius: 18px;
+        font-weight: normal;
+        font-size: 16px;
+        background-color: @orange !important;
+        border-color: @orange !important;
+    }
+}
